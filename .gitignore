@@ -1,0 +1,25 @@
+#Carpetas y archivos de un proyecto de node con typescript
+tasks-api/dist
+tasks-api/node_modules
+tasks-api/.env
+
+# Logs
+task-app/logs
+task-app/*.log
+task-app/npm-debug.log*
+
+task-app/node_modules
+task-app/dist
+task-app/dist-ssr
+task-app/*.local
+
+# Editor directories and files
+task-app/.vscode/*
+task-app/!.vscode/extensions.json
+task-app/.idea
+task-app/.DS_Store
+task-app/*.suo
+task-app/*.ntvs*
+task-app/*.njsproj
+task-app/*.sln
+task-app/*.sw?
