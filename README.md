@@ -55,6 +55,19 @@ SERVER_PORT=3000
 SECRET='una cadena de caracteres'
 FRONTEND_URL=http://localhost:5173
 ```
+Ejecutar la generacion de usuarios
+```
+npm run seed
+```
+
+Credenciales Usuarios
+```
+username: dhernandez
+password: dhernandez123
+
+username: lperez
+password: lperez123
+```
 Ejecutar los proyectos en desarrollo
 ```
 npm run dev

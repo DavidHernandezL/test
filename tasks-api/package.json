@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "tsc": "tsc",
-    "start": "node build/app.js",
-    "dev": "tsc && node dist/app.js"
+    "start": "node dist/app.js",
+    "dev": "tsc && node dist/app.js",
+    "seed": "tsc && node dist/config/seed.js"
   },
   "author": "",
   "license": "ISC",
