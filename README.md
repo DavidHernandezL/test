@@ -39,7 +39,7 @@ taskManager/
 
 #### Clonar el repositorio
 ```bash
-git clone [https://github.com/DavidHernandezL/taskManager.git](https://github.com/DavidHernandezL/taskManager.git)
+git clone https://github.com/DavidHernandezL/taskManager.git
 ```
 
 #### Configuración backend
