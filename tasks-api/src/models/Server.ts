@@ -5,8 +5,7 @@ import userRoutes from '../routes/user.routes.js'
 import authRoutes from '../routes/auth.routes.js'
 
 import createConnection from '../config/database.js';
-// const cors = require('cors');
-// const cookies = require('cookie-parser');
+import cors from 'cors';
 
 
 class Server {
@@ -33,12 +32,12 @@ class Server {
     }
 
     middlewares() {
-        // this.app.use(
-        //     cors({
-        //         origin: process.env.FRONTEND_URL,
-        //         credentials: true,
-        //     }),
-        // );
+        this.app.use(
+            cors({
+                origin: process.env.FRONTEND_URL,
+                credentials: true,
+            }),
+        );
 
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: false }));

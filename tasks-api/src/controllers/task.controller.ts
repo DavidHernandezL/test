@@ -51,7 +51,8 @@ const updateTask = async (req: Request, res: Response) => {
         const taskUpdate = await Task.findByIdAndUpdate(id, { title, description, completed }, { new: true });
 
         res.json({
-            taskUpdate,
+            msg: 'Tarea creada',
+            data: taskUpdate?.toJSON(),
         }).status(200);
     } catch (error) {
         res

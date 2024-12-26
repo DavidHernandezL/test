@@ -9,16 +9,19 @@ declare global {
     }
 }
 
-const verifyAuthToken = (req: Request, res: Response, next: NextFunction): void => {
+const verifyAuthToken = (req: Request, res: Response, next: NextFunction): any => {
     const { token } = req.headers;
 
-    if (!token) res.status(404).json({ msg: 'No encontrado' });
+    if (!token) return res.status(404).json({ msg: 'No encontrado' });
 
     jwt.verify(token as string, process.env.SECRET || '', (err, decoded) => {
+        if (err) return res.status(401).json({ msg: 'No autorizado' });
         req.user = decoded;
-        if (err) res.status(401).json({ msg: 'No autorizado' });
         next();
+        return;
     });
+
+    return;
 };
 
 export default verifyAuthToken;

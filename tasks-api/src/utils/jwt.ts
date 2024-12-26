@@ -12,7 +12,7 @@ const createAccessToken = (payload: { id: any }, expiresIn: string) => {
     });
 };
 
-const verifyAccessToken = (token: string) => {
+const verifyAccessToken = (token: string): Promise<any> => {
     return new Promise((resolve, reject) => {
         jwt.verify(token, process.env.SECRET as string, (err, decoded) => {
             if (err) {
