@@ -32,12 +32,7 @@ class Server {
     }
 
     middlewares() {
-        this.app.use(
-            cors({
-                origin: 'https://test-git-main-ravefuzzballs-projects.vercel.app',
-            }),
-        );
-
+        this.app.use(cors());
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: false }));
         // this.app.use(cookies());
